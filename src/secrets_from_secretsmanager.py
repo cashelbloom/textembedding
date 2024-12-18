@@ -7,7 +7,7 @@ from botocore.exceptions import ClientError
 def get_secret():
     # Create a Secrets Manager client
     client = boto3.client("secretsmanager", region_name="us-east-1")
-    secret_name = "openai/apikey"
+    secret_name = ""
     try:
         # Retrieve the secret
         get_secret_value_response = client.get_secret_value(SecretId=secret_name)
